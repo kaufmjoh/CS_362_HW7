@@ -23,6 +23,13 @@ class TestCaseLeapYear(unittest.TestCase):
 		self.assertEqual(LeapYear.LeapYear(1900), "Not a Leap Year");
 		self.assertEqual(LeapYear.LeapYear(2100), "Not a Leap Year");
 
+	
+	#Test years that are divisible by 4, but not 100 or 400
+	def test4MultLeapYears(self):
+		self.assertEqual(LeapYear.LeapYear(4), "Yes a Leap Year");
+		self.assertEqual(LeapYear.LeapYear(2016), "Yes a Leap Year");
+		self.assertEqual(LeapYear.LeapYear(2020), "Yes a Leap Year");
+
 
 if __name__ == '__main__':
 	unittest.main();
